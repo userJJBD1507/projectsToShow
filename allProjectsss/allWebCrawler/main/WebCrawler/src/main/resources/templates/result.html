@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Results</title>
+    <style>
+        a {
+            font-size: 24px;
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Search Results</h1>
+<p>You searched for: <span th:text="${query}"></span></p>
+<ul>
+    <li th:each="result : ${results}">
+        <a th:href="@{${result.url}}" th:text="${result.url}" target="_blank"></a>
+    </li>
+</ul>
+</body>
+</html>
