@@ -11,10 +11,6 @@ import java.util.List;
 
 @org.springframework.stereotype.Repository
 public interface Repository extends JpaRepository<URLqueueEntity, Integer> {
-    //    @Query("select url from URLqueueEntity url where url.url=:url")
-//    public URLqueueEntity getUrl(@Param("url") String url);
-//    @Query("")
-//    public List<URLqueueEntity> getUrls();
     @Query("select url from URLqueueEntity url where url.id>:fixedId")
     public List<URLqueueEntity> getAfterID(@Param("fixedId") int fixedId);
     @Query("SELECT CASE WHEN COUNT(u) > 0 THEN true ELSE false END FROM URLqueueEntity u WHERE u.url = ?1")

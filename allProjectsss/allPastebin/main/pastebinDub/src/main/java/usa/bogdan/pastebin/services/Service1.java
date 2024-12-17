@@ -42,8 +42,8 @@ public class Service1 {
     Repository2 repository2;
     private static final String SERVICE_ENDPOINT = "s3.wasabisys.com";
     private static final String REGION = "us-east-1";
-    private static final String ACCESS_KEY = "CKJZ27AMBOTRL0T9AS0A";
-    private static final String SECRET_KEY = "reXduJz7Y3zSRuj379JD9lvDQyXvydCS3RY7zCmj";
+    private static final String ACCESS_KEY = "XXX";
+    private static final String SECRET_KEY = "XXX";
     private static final String BUCKET_NAME = "bucket-777";
 
     private static final AmazonS3 AMAZON_S3_CLIENT = AmazonS3ClientBuilder.standard()

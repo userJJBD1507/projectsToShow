@@ -42,23 +42,6 @@ public class URLextractor {
             }
         }
     }
-
-//    public void extractorContent(String url, Document document) throws Exception {
-//        Elements titles = document.select("title, h1, h2, h3, h4, h5, h6");
-//        if (!titles.isEmpty()) {
-//            StringBuilder contentBuilder = new StringBuilder();
-//            for (Element title : titles) {
-//                contentBuilder.append(title.text()).append("\n");
-//            }
-//            String contentText = contentBuilder.toString();
-//            System.out.println(contentText);
-//            ContentEntity contentEntity = new ContentEntity();
-//            contentEntity.setContent(contentText);
-//            mongoDBRepository.save(contentEntity);
-//            String s = contentEntity.getId();
-//            repository.updateId(s, url);
-//        }
-//    }
         public void extractorContent(String url, Document document) throws Exception {
         Elements titles = document.select("title");
         if (!titles.isEmpty()) {

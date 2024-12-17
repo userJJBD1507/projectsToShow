@@ -12,13 +12,6 @@ import usa.bogdan.pastebin.entities.MetadataEntity;
 public interface Repository1 extends JpaRepository<MetadataEntity, Integer> {
     @Query("select met from MetadataEntity met where met.metadata_link=:metadata")
     public MetadataEntity functionGetting(@Param("metadata") String metadata);
-//    @Query("select met.metadata_link from MetadataEntity met where met.hashcode=:hashcode")
-//    public String functionName(@Param("hashcode") int hashcode);
-//    @Query("update MetadataEntity met set met.hashcode=:hashcode where met.metadata_link=:metadata")
-//    @Modifying
-//    @Transactional
-//    public int update(@Param("hashcode") int hashcode,
-//                      @Param("metadata") String metadata);
     @Query("delete MetadataEntity met where met.metadata_link=?1")
     @Modifying
     @Transactional

@@ -34,7 +34,7 @@ public class HTMLParser {
     public void init() throws Exception {
         String URL = "https://google.com/";
         Document document = Jsoup.connect(URL)
-                .userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
+                .userAgent("XXX")
                 .get();
         Elements title = document.select("title");
         repository.save(new URLqueueEntity(URL));
